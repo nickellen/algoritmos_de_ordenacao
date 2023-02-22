@@ -1,0 +1,18 @@
+# Ordenação Bubblesort
+lista = [1,2,3,8,0,0,1,7,5,7,8,9,2,1,7,53,2,11]
+tam = len(lista)
+
+for i in range(0, tam-1):
+    troca = 'false'
+    for n in range(0,tam-1):
+        if lista[n] > lista [n+1]:
+            temp= lista[n]
+            lista[n] = lista[n+1]
+            lista[n+1] = temp
+            n+=1
+            troca = 'true'
+    i+=1
+    if troca=='false':
+        break
+   
+print(lista)
