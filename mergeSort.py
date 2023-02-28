@@ -11,11 +11,8 @@ def merge(lista, inicio, meio, fim):
     for i in lista:
         inf+=i
     
-    lista1 = lista[inicio:meio]
-    lista2 = lista[meio:fim]
-    
-    lista1.append(inf)
-    lista2.append(inf)
+    lista1 = lista[inicio:meio] + [inf]
+    lista2 = lista[meio:fim] + [inf]
     
     i = 0
     j = 0
