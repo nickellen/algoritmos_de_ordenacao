@@ -103,6 +103,7 @@ def imprimeListas(algoritmo):
     
 def main():
     
+    print("\n\n")
     while True:
         print("-------------------------------------------------------------------")
         print("Selecione o algoritmo de ordenação:\n1 - BubbleSort\n2 - QuickSort\n3 - MergeSort")
