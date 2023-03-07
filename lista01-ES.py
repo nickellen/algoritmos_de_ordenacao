@@ -84,7 +84,7 @@ def merge(lista, inicio, meio, fim):
         j += 1
         k += 1
             
-def mergeSort2(lista, inicio, meio, fim):
+def merge2(lista, inicio, meio, fim):  #segunda opção de função merge
     n1 = meio - inicio + 1
     n2 = fim - meio
         
