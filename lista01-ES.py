@@ -84,6 +84,34 @@ def merge(lista, inicio, meio, fim):
         j += 1
         k += 1
             
+def mergeSort2(lista, inicio, meio, fim):
+    n1 = meio - inicio + 1
+    n2 = fim - meio
+        
+    esquerda = [0] * (n1+1)
+    direita = [0] * (n2+1)
+    
+    inf = sum(lista)
+
+    for i in range(0 ,  n1):
+        esquerda[i] = lista[inicio+i]
+    
+    for j in range(0 ,  n2):
+        direita[j] = lista[meio+1+j]
+    
+    esquerda[n1] = inf
+    direita[n2] = inf
+    
+    i = j = 0
+    
+    for k in range(inicio, fim+1):
+        if esquerda[i] <= direita[j]:
+            lista[k] = esquerda[i]
+            i += 1
+        else:
+            lista[k] = direita[j]
+            j += 1  
+            
 def criaVetorEmbaralhado(n):
     lista  = [0]*n
     
@@ -96,7 +124,7 @@ def criaVetorEmbaralhado(n):
     
     return lista
 
-def impremeResultado(algoritmo):
+def imprimeResultado(algoritmo):
     print(f"Algoritmo {algoritmo.__name__}:\n")
     for n in range(1,5):
         tam = 10**n
@@ -121,11 +149,11 @@ def main():
         
         match opcao:
             case 1:
-                impremeResultado(bubbleSort)
+                imprimeResultado(bubbleSort)
             case 2:
-                impremeResultado(quickSort)
+                imprimeResultado(quickSort)
             case 3:
-                impremeResultado(mergeSort)
+                imprimeResultado(mergeSort)
         
     print("\n\n")
 
